@@ -8,7 +8,7 @@ import edu.kirkwood.model.wren.Coordinate;
 
 public class CoordinateCalculator {
 
-    public void start(){
+    public static void start(){
         boolean done = false;
         Messages.coordinateGreet();
 
