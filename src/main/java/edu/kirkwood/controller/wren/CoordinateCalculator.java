@@ -26,11 +26,17 @@ public class CoordinateCalculator {
             Coordinate coordOne = new Coordinate(coordOneX, coordOneY);
             Coordinate coordTwo = new Coordinate(coordTwoX, coordTwoY);
 
-            double distance = coordOne.calculateDistanceBetween(coordTwo);
-            double slope = coordOne.calculateSlope(coordTwo);
+            try {
+                double distance = coordOne.calculateDistanceBetween(coordTwo);
 
-            UIUtility.displayMessage("The distance between these points is: " + distance);
-            UIUtility.displayMessage("The slope of the line between these two points is: " + slope);
+                double slope = coordOne.calculateSlope(coordTwo);
+
+                UIUtility.displayMessage("The distance between these points is: " + distance);
+                UIUtility.displayMessage("The slope of the line between these two points is: " + slope);
+            } catch (Exception exception){
+                UIUtility.displayError(exception.toString());
+                UIUtility.pressEnterToContinue();
+            }
 
             String userChoice = UserInput.getString("Would you like to return to main menu? (Y/N): ", true);
             if (userChoice.toUpperCase().equals("Y")){
