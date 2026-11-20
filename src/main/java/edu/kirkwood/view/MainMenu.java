@@ -11,6 +11,7 @@ import edu.kirkwood.controller.noah.InterestCalculatorController;
 import edu.kirkwood.controller.masean.GPACalculator;
 import edu.kirkwood.controller.evan.DoomsdayCalculatorController;
 import edu.kirkwood.controller.trae.AutoLoanCalculator;
+import edu.kirkwood.controller.wren.CoordinateCalculator;
 import edu.kirkwood.controller.xavian.HalfLifeCalculator;
 
 import static edu.kirkwood.view.UIUtility.printMenu;
@@ -35,6 +36,7 @@ public class MainMenu {
             "Trae's Auto Loan Calculator",
             "Colman's Slope Calculator",
             "Clapton's Base Conversion Calculator",
+                "Wren's Coordinate Calculator",
             "Quit"
           };
         while(true) {
@@ -79,6 +81,9 @@ public class MainMenu {
                     break;
                 case 13:
                     BaseConversionCalculator.start();
+                    break;
+                case 14:
+                    CoordinateCalculator.start();
                     break;
                 default:
                     return;
