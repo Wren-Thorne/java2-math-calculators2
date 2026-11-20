@@ -333,10 +333,10 @@ class AstroOEVTest {
     @DisplayName("Returns good for good conditions (2,400 < 2419.56")
     void calcImageQualityGood(){
         astroOEV.setBortle(4);
-        astroOEV.setSubExposureTime(20);
+        astroOEV.setSubExposureTime(25);
         astroOEV.setFrameCount(180);
         String actual = astroOEV.calcImageQuality();
-        assertEquals("Fair", actual);
+        assertEquals("Good", actual);
     }
     @Test
     @DisplayName("Returns Excellent for excellent conditions (12,000 < 12,170.22)")
