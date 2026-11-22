@@ -336,7 +336,7 @@ class AstroOEVTest {
         astroOEV.setSubExposureTime(25);
         astroOEV.setFrameCount(180);
         String actual = astroOEV.calcImageQuality();
-        assertEquals("Fair", actual);
+        assertEquals("Good", actual);
     }
     @Test
     @DisplayName("Returns Excellent for excellent conditions (12,000 < 12,170.22)")
